@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -18,4 +19,54 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.montserrat {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@keyframes bounce-custom {
+  0%, 10%, 90%, 100% {
+    transform: translateY(0);
+  }
+  55% {
+    transform: translateY(-15px);
+  }
+}
+
+.bounce-1 {
+  animation: bounce-custom 2s ease-in-out infinite;
+}
+
+.bounce-2 {
+  animation: bounce-custom 2s ease-in-out infinite;
+  animation-delay: 0.1s;
+}
+
+.bounce-3 {
+  animation: bounce-custom 2s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.bounce-4 {
+  animation: bounce-custom 2s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  animation: fade-in-left 0.5s ease-out forwards;
 }
